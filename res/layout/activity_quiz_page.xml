@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.grevol.QuizPage" >
+
+    <Button
+        android:id="@+id/button_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="NO"
+        android:onClick = "noKnow" />
+
+    <Button
+        android:id="@+id/button_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button_no"
+        android:layout_alignBottom="@+id/button_no"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:text="YES"
+        android:onClick = "yesKnow" />
+
+    <Button
+        android:id="@+id/button_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_no"
+        android:layout_alignRight="@+id/textView_answer"
+        android:layout_marginRight="14dp"
+        android:text="Mark"
+        android:onClick = "markWord" />
+
+    <TextView
+        android:id="@+id/textview_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="word"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/textView_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_seeAnswer"
+        android:layout_below="@+id/button_seeAnswer"
+        android:layout_marginTop="42dp"
+        android:text="answer"
+        android:gravity="center"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/button_seeAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textview_word"
+        android:layout_below="@+id/textview_word"
+        android:layout_marginTop="70dp"
+        android:onClick="seeAnswer"
+        android:text="See answer" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_yes"
+        android:layout_alignLeft="@+id/textView_answer"
+        android:layout_marginBottom="24dp"
+        android:text="@string/doyouknow" />
+
+</RelativeLayout>
